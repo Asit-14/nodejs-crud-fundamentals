@@ -1,0 +1,91 @@
+Node.js CRUD with Express & MongoDB
+--------------------------------------------
+learning and revising CRUD operations
+(Create, Read, Update, Delete) using Node.js, Express, and MongoDB.
+
+
+
+MAIN SERVER FILE (app.js)
+
+Responsibilities:
+- Create Express app
+- Load environment variables
+- Use JSON middleware
+- Connect MongoDB
+- Start server
+
+RULE:
+- app.listen() should be called ONLY ONCE
+- MongoDB should connect BEFORE server starts
+
+MODEL (user.model.js)
+
+
+Purpose:
+- Defines structure of data stored in MongoDB
+
+Fields:
+- name (String, required)
+- email (String, required, unique)
+- address (String, required)
+
+RULE:
+- No request or response logic here
+
+CONTROLLER (user.controller.js)
+
+
+Purpose:
+- Handles CRUD operations
+
+Functions:
+- createUser     -> POST
+- getAllUsers    -> GET
+- updateUser     -> PUT
+- deleteUser     -> DELETE
+
+RULE:
+- Try-catch for every async function
+- Controller talks to Model only
+
+ROUTES (user.route.js)
+
+Purpose:
+- Map URLs to controller functions
+
+Endpoints:
+POST   /api/user/create
+GET    /api/user/getallusers
+PUT    /api/user/update/:id
+DELETE /api/user/delete/:id
+
+RULE:
+- No business logic here
+- Only route → controller mapping
+
+
+
+1. Start server:
+   npm run dev
+
+2. CREATE (POST):
+   POST http://localhost:8000/api/user/create
+
+3. READ (GET):
+   GET http://localhost:8000/api/user/getallusers
+
+4. UPDATE (PUT):
+   PUT http://localhost:8000/api/user/update/:id
+
+5. DELETE (DELETE):
+   DELETE http://localhost:8000/api/user/delete/:id
+
+
+
+CRUD = Create, Read, Update, Delete
+
+POST   → Create
+GET    → Read
+PUT    → Update
+DELETE → Delete
+

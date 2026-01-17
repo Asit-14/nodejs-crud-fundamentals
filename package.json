@@ -1,0 +1,29 @@
+{
+  "name": "CRUD fundamentals",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Asit-14/nodejs-crud-fundamentals#readme",
+  "bugs": {
+    "url": "https://github.com/Asit-14/nodejs-crud-fundamentals/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Asit-14/nodejs-crud-fundamentals.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon src/app.js"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongoose": "^9.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
